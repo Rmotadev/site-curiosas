@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Loja de Lingerie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./img/logo3.jpeg" alt="logo">
+            </div>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <img src="./img/Nova Coleção de Lingeries Banner Elegante Cinza e Bege.jpg" alt="banner">
+            <p>Descubra peças que celebram sua beleza e poder.</p>
+            <a href="#produtos" class="cta-button">Ver Coleção</a>
+        </section>
+
+        <section id="produtos">
+            <h2>Nossos Produtos</h2>
+            <div class="produtos-grid">
+                <!-- Cards de produtos serão adicionados aqui -->
+                <div class="produto-card">
+                    <img src="./img/lingerie-1.jpeg" alt="Lingerie">
+                    <h3>Lingerie Elegante</h3>
+                    <p>R$ 99,90</p>
+                </div>
+                <div class="produto-card">
+                    <img src="./img/pijama-1.jpeg" alt="Pijama">
+                    <h3>Pijama Confortável</h3>
+                    <p>R$ 129,90</p>
+                </div>
+                <div class="produto-card">
+                    <img src="./img/biquini-1.jpeg" alt="Biquíni">
+                    <h3>Biquíni Estiloso</h3>
+                    <p>R$ 149,90</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-nos">
+            <h2>Sobre Nós</h2>
+            <p>Acreditamos que toda mulher merece se sentir linda, confiante e empoderada. Nossa missão é oferecer lingerie, pijamas e biquínis que não apenas vistam bem, mas que também elevem a autoestima e celebrem a individualidade de cada uma. Nossas peças são cuidadosamente selecionadas, pensando em conforto, qualidade e design que realça a beleza natural.</p>
+            <p>Somos mais que uma loja, somos um convite para você se amar e se expressar com autenticidade.</p>
+        </section>
+
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <div class="contato-info">
+                <p><strong>Endereço:</strong> Rua das Flores, 123 - Bairro Encantado - Cidade Exemplo - UF</p>
+                <p><strong>Telefone:</strong> (XX) XXXXX-XXXX</p>
+                <p><strong>Email:</strong> contato@sualoja.com</p>
+            </div>
+            <button id="abrir-formulario" class="cta-button">Fale Conosco</button>
+        </section>
+
+        <div id="formulario-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>Formulário de Contato</h3>
+                <form id="form-contato">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="celular">Celular:</label>
+                    <input type="tel" id="celular" name="celular" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <button type="submit" class="cta-button">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sua Loja de Lingerie. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

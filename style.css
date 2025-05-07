@@ -1,0 +1,322 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf2f6; /* Rosa bem claro de fundo */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #c2185b; /* Rosa escuro para títulos */
+}
+
+a {
+    text-decoration: none;
+    color: #c2185b;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/****** Header e Navegação ******/
+header {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0d9e7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header .logo {
+    width: 150px;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 25px;
+}
+
+header ul li a {
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #880e4f; /* Rosa mais escuro no hover */
+}
+
+/****** Seção Hero ******/
+#hero {
+    background: url('../images/hero_placeholder.jpg') no-repeat center center/cover; /* Placeholder - idealmente uma imagem inspiradora */
+    color: #fff;
+    text-align: center;
+    padding: 100px 30px;
+    background-color: rgba(194, 24, 91, 0.6); /* Overlay rosa para legibilidade */
+    background-blend-mode: multiply;
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: #fff;
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #c2185b;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #880e4f;
+    transform: translateY(-2px);
+}
+
+/****** Seção Produtos ******/
+#produtos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#produtos h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.produto-card {
+    background-color: #fff;
+    border: 1px solid #f0d9e7;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 600px; /* Altura fixa para as imagens dos produtos */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.produto-card h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.produto-card p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/****** Seção Sobre Nós ******/
+#sobre-nos {
+    background-color: #fff5f8; /* Tom de rosa muito suave */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#sobre-nos h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+#sobre-nos p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    line-height: 1.8;
+}
+
+/****** Seção Contato ******/
+#contato {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#contato h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.contato-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+#abrir-formulario {
+    margin-top: 20px;
+}
+
+/****** Modal Formulário ******/
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Fundo escuro semi-transparente */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #f0d9e7;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    position: relative;
+    animation: fadeInModal 0.5s;
+}
+
+@keyframes fadeInModal {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #c2185b;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#form-contato label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+}
+
+#form-contato input[type="text"],
+#form-contato input[type="tel"],
+#form-contato input[type="email"] {
+    width: calc(100% - 22px); /* Ajuste para padding e borda */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#form-contato button[type="submit"] {
+    width: 100%;
+}
+
+/****** Footer ******/
+footer {
+    background-color: #c2185b;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/****** Responsividade ******/
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header ul {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    #hero h1 {
+        font-size: 2.2em;
+    }
+
+    #hero p {
+        font-size: 1.2em;
+    }
+
+    .produtos-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+    }
+}
+
